@@ -4,17 +4,16 @@ function Food({ name }) {
   return <h1>I love {name}</h1>; 
 }
 
-constdILike = [
-  {name = "Kimchi"},
-  {name = "Samgyeopsal"},
-  {name = "Bibimbap"}
+const FoodILike = [
+  {id=1, name = "Kimchi"},
+  {id=2, name = "Samgyeopsal"},
+  {id=3, name = "Bibimbap"}
 ];
 
 function App() {
   return (
     <div>
-      <h1>Hello</h1>
-      {FoodILike.map(dish => <Food name={dish.name} />)}
+      {FoodILike.map(dish => (<Food key={dish.id} name={dish.name} />))}
     </div>
   );
 }
