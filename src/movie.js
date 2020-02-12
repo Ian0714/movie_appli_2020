@@ -14,7 +14,7 @@ return (
           <li key={number} className="genres__genre">{genre}</li>
           ))}
         </ul>
-        <p class="movie__summary">{summary}</p>
+        <p class="movie__summary">{summary.slice(0,140)}</p>
       </div>
     </div>
   );
